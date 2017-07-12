@@ -12,11 +12,11 @@ class App extends Component {
   render() {
     return (
       <section>
-        <h2><a href='#' onClick={this.props.toggleStore.toggleMe}>Toggle me</a> - I am currently {this.props.toggleStore.isToggled ? 'true' : 'false'}</h2>
-        <Link to="/app">Dashboard</Link>
-        <Link to="/app/login">Login</Link>
+        <h2><button onClick={this.props.toggleStore.toggleMe}>Toggle me</button> - I am currently {this.props.toggleStore.isToggled ? 'true' : 'false'}</h2>
+
         <Switch>
           <Route exact path="/app/login" component={FauxLogin} />
+
           <Route path="/app" render={() => (
             this.props.toggleStore.isToggled ? (
               <FauxDashboard />
@@ -40,9 +40,7 @@ class App extends Component {
 class FauxDashboard extends Component {
   render() {
     return (
-      <div>
-        <h3>This is totally a dashboard.</h3>
-      </div>
+      <h3>This is totally a dashboard.</h3>
     )
   }
 }
@@ -55,9 +53,7 @@ class FauxLogin extends Component {
       return (<Redirect to='/app' />)
     }
     return (
-      <div>
-        <h3>In a past life I was a login page.</h3>
-      </div>
+      <h3>In a past life I was a login page.</h3>
     )
   }
 }
