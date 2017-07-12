@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Jez Templeton <jez.templeton@bom.gov.au",
   "dependencies": {
-    "gatsby": "1.0.0-beta.5",
+    "gatsby": "1.0.0-beta.6",
     "gatsby-link": "1.0.0-beta.4",
     "gatsby-plugin-react-helmet": "1.0.0-beta.1",
     "mobx": "^3.2.1",
